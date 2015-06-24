@@ -1,0 +1,103 @@
+#!/usr/bin/env ruby
+
+task :default => 'all'
+task :clean => ["js:clean", "ruby:clean", "python:clean"]
+task :all => [:ruby, :python, :js]
+
+# JavaScript
+task :js => ["js:install", "js:unittest", "js:exampletest"] do
+  puts "JavaScript: Passed."
+end
+task :ruby => ["ruby:install", "ruby:unittest", "ruby:exampletest"] do
+  puts "Ruby: Passed."
+end
+task :python => ["python:install", "python:unittest", "python:exampletest"] do
+  puts "Python: Passed."
+end
+
+namespace :ruby do
+  task :install do
+    unless Dir.exists?('databox-js')
+      sh "git clone git://github.com/databox/databox-ruby.git databox-ruby"
+      Dir.chdir('./databox-ruby') do
+        sh "rvm use `cat .ruby-version`@`cat .ruby-gemset` --create"
+        sh "gem install bundler"
+        sh "bundle install"
+      end
+    end
+  end
+
+  task :clean do
+    sh "rm -rf ./databox-ruby"
+  end
+
+  task :unittest do
+    Dir.chdir('./databox-ruby') do
+      sh "bundle exec rspec"
+    end
+  end
+
+  task :exampletest do
+    Dir.chdir("./databox-ruby") do
+      sh "ruby -v"
+      sh "ruby ./example.rb"
+    end
+  end
+end
+
+namespace :python do
+  task :install do
+    unless Dir.exists?('databox-python')
+      sh "git clone git://github.com/databox/databox-python.git databox-python"
+      Dir.chdir('./databox-python') do
+        sh "pip install --upgrade -r requirements.txt"
+        sh "python setup.py install"
+      end
+    end
+  end
+
+  task :unittest do
+    Dir.chdir("./databox-python") do
+      sh "python -munittest discover -p -t . 'test*' -v"
+    end
+  end
+
+  task :exampletest do
+    Dir.chdir("./databox-python") do
+      sh "python -V"
+      sh "python ./example.py"
+    end
+  end
+
+  task :clean do
+    sh "rm -rf ./databox-python"
+  end
+end
+
+namespace :js do
+  task :install do
+    unless Dir.exists?('databox-js')
+      sh "git clone git://github.com/databox/databox-js.git databox-js"
+      Dir.chdir('./databox-js') do
+        sh "npm install"
+      end
+    end
+  end
+
+  task :unittest do
+    Dir.chdir("./databox-js") do
+      sh "npm test"
+    end
+  end
+
+  task :exampletest do
+    Dir.chdir('./databox-js') do
+      sh "node -v"
+      sh "node ./example.js"
+    end
+  end
+
+  task :clean do
+    sh "rm -rf ./databox-js"
+  end
+end

@@ -12,12 +12,36 @@ Meta-repository and test suite for all Databox SDKs.
 | [PHP](https://github.com/databox/databox-php)               | [![Build Status](https://travis-ci.org/databox/databox-php.svg)](https://travis-ci.org/databox/databox-php)       |
 | [Python](https://github.com/databox/databox-python)         | [![Build Status](https://travis-ci.org/databox/databox-python.svg)](https://travis-ci.org/databox/databox-python) |
 
+## Running suite
+
+This repository contains [Dockerfile](Dockerfile) that can used as basis for testing [Databox](http://databox.com) SDKs. [Rake](sdks/Rakefile) is used to `pull` data from repositories run its unit tests and examples.
+
+    # Installs all SDKs & runs all tests
+    docker run -ti otobrglez/databox-sdk \
+      /bin/bash -l -c "rake"
+
+    # Run JavaScript SDK
+    docker run -ti otobrglez/databox-sdk \
+      /bin/bash -l -c "rake clean js"
+
+    # Run Python and Ruby SDK,...
+        docker run -ti otobrglez/databox-sdk \
+          /bin/bash -l -c "rake clean js ruby"
+
 ## Development
 
-    boot2doocker init
+Help yourself with [boot2docker](http://boot2docker.io/).
+
+    boot2docker init
     boot2docker up
+
+Build databox-sdk image with local [Dockerfile](Dockerfile).
+
     docker build -t otobrglez/databox-sdk .
-    docker run -ti otobrglez/databox-sdk node -v
+
+Image mounts `/sdks` folder. When developing, you can also mount local folder to container:
+
+    docker run -t -i -v `pwd`/sdks:/sdks otobrglez/databox-sdk /bin/bash -l -c "rake clean all"
 
 ## Author
 
