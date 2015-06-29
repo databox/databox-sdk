@@ -2,6 +2,8 @@
 
 Meta-repository and Docker based test suite for Databox SDKs.
 
+[![Circle CI](https://circleci.com/gh/databox/sdk-tests/tree/master.svg?style=svg)](https://circleci.com/gh/databox/sdk-tests/tree/master)
+
 ## SDKs
 
 | Language / SDK                                              |   CI Status                                                                                                       |
