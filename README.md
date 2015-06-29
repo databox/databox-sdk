@@ -1,6 +1,6 @@
 # Databox SDK
 
-Meta-repository and test suite for all Databox SDKs.
+Meta-repository and Docker based test suite for Databox SDKs.
 
 ## SDKs
 
@@ -16,30 +16,30 @@ Meta-repository and test suite for all Databox SDKs.
 
 This repository contains [Dockerfile](Dockerfile) that can used as basis for testing [Databox](http://databox.com) SDKs. [Rake](sdks/Rakefile) is used to `pull` data from repositories run its unit tests and examples.
 
-Installs all SDKs & runs all tests
+Pull source code from all SDKs, install dependencies and run all tests.
 
-    docker run -ti otobrglez/databox-sdk \
+    docker run -ti databox-sdk \
       /bin/bash -l -c "rake"
 
-Run specific suite (JavaScript SDK in this example)
+Run specific test suite (JavaScript SDK in this example):
 
-    docker run -ti otobrglez/databox-sdk \
+    docker run -ti databox-sdk \
       /bin/bash -l -c "rake clean js"
 
 ## Development
 
-Help yourself with [boot2docker](http://boot2docker.io/).
+Help yourself with [boot2docker](http://boot2docker.io/) if you are on OSX.
 
     boot2docker init
     boot2docker up
 
 Build databox-sdk image with local [Dockerfile](Dockerfile).
 
-    docker build -t otobrglez/databox-sdk .
+    docker build -t databox-sdk .
 
 Image mounts `/sdks` folder. When developing, you can also mount local folder to container:
 
-    docker run -t -i -v `pwd`/sdks:/sdks otobrglez/databox-sdk \
+    docker run -t -i -v `pwd`/sdks:/sdks databox-sdk \
       /bin/bash -l -c \
       "rake clean all"
 

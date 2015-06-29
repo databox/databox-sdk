@@ -8,21 +8,19 @@ ADD ./sdks /sdks
 
 RUN apt-get update -qq
 
-RUN apt-get install -y curl patch gawk g++ gcc make libc6-dev patch libreadline6-dev zlib1g-dev libssl-dev \
-  libyaml-dev libsqlite3-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev \
-  git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 \
-  libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev \
-  git-core wget gpa openssl ssh-client openssh-server apt-transport-https \
-  build-essential software-properties-common \
-  python-dev python-setuptools python-pip
+RUN apt-get install -y apt-transport-https autoconf automake bison build-essential \
+  curl g++ gawk gcc git-core gpa libc6-dev libcurl4-openssl-dev libffi-dev libgdbm-dev libncurses5-dev \
+  libreadline-dev libreadline6-dev libsqlite3-dev libssl-dev libtool \
+  libxml2-dev libxslt1-dev libyaml-dev make openssh-server openssl patch pkg-config \
+  python-dev python-pip python-setuptools python-software-properties \
+  software-properties-common sqlite3 ssh-client wget zlib1g-dev
 
 # NodeJS (latest)
 RUN curl -sL https://deb.nodesource.com/setup_dev | sudo bash -
 RUN apt-get -y install nodejs
 
 # Ruby & RVM
-RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-RUN curl -sSL https://get.rvm.io | bash
+RUN curl -sSLk https://get.rvm.io | bash
 RUN /bin/bash -l -c "rvm requirements"
 RUN /bin/bash -l -c "rvm install 2.2.2"
 RUN /bin/bash -l -c "rvm use 2.2.2 --default"
