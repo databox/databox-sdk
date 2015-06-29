@@ -20,13 +20,13 @@ This repository contains [Dockerfile](Dockerfile) that can used as basis for tes
 
 Pull source code from all SDKs, install dependencies and run all tests.
 
-    docker run -ti databox-sdk \
-      /bin/bash -l -c "rake"
+    docker run -ti databox-sdk /bin/bash -lc \
+      "rake"
 
 Run specific test suite (JavaScript SDK in this example):
 
-    docker run -ti databox-sdk \
-      /bin/bash -l -c "rake clean js"
+    docker run -ti databox-sdk /bin/bash -lc \
+      "rake clean js"
 
 ## Development
 
@@ -41,8 +41,7 @@ Build databox-sdk image with local [Dockerfile](Dockerfile).
 
 Image mounts `/sdks` folder. When developing, you can also mount local folder to container:
 
-    docker run -t -i -v `pwd`/sdks:/sdks databox-sdk \
-      /bin/bash -l -c \
+    docker run -ti -v `pwd`/sdks:/sdks databox-sdk /bin/bash -lc \
       "rake clean all"
 
 ## Author
