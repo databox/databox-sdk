@@ -14,6 +14,10 @@ end
 task :python => ["python:install", "python:unittest", "python:exampletest"] do
   puts "Python: Passed."
 end
+# not yet fully functional
+# task :java => ["java:install", "java:unittest"] do
+#   puts "Java: Passed."
+# end
 
 namespace :ruby do
   task :install do
@@ -99,5 +103,26 @@ namespace :js do
 
   task :clean do
     sh "rm -rf ./databox-js"
+  end
+end
+
+namespace :java do
+  task :install do
+    unless Dir.exists?('databox-java')
+      sh "git clone git://github.com/databox/databox-java.git databox-java"
+      Dir.chdir('./databox-java') do
+        sh "mvn install"
+      end
+    end
+  end
+
+  task :unittest do
+    Dir.chdir("./databox-java") do
+      sh "mvn test"
+    end
+  end
+
+  task :clean do
+    sh "rm -rf ./databox-java"
   end
 end
