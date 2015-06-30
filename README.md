@@ -13,6 +13,7 @@ Meta-repository and Docker based test suite for Databox SDKs.
 | [Go](https://github.com/databox/databox-go)                 | [![Build Status](https://travis-ci.org/databox/databox-go.svg)](https://travis-ci.org/databox/databox-go)         |
 | [PHP](https://github.com/databox/databox-php)               | [![Build Status](https://travis-ci.org/databox/databox-php.svg)](https://travis-ci.org/databox/databox-php)       |
 | [Python](https://github.com/databox/databox-python)         | [![Build Status](https://travis-ci.org/databox/databox-python.svg)](https://travis-ci.org/databox/databox-python) |
+| [Java](https://github.com/databox/databox-java)             | [![Build Status](https://travis-ci.org/databox/databox-java.svg)](https://travis-ci.org/databox/databox-java)     |
 
 ## Running suite
 
