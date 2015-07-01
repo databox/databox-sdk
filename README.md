@@ -49,3 +49,22 @@ Image mounts `/sdks` folder. When developing, you can also mount local folder to
 
 - [Oto Brglez](https://github.com/otobrglez)
 
+[js-travis-badge]: https://secure.travis-ci.org/databox/databox-js.png
+[js-travis]: http://travis-ci.org/databox/databox-js
+[databox-js]: https://github.com/databox/databox-js
+[ruby-travis-badge]: https://secure.travis-ci.org/databox/databox-ruby.png
+[ruby-travis]: http://travis-ci.org/databox/databox-ruby
+[databox-ruby]: https://github.com/databox/databox-ruby
+[go-travis-badge]: https://secure.travis-ci.org/databox/databox-go.png
+[go-travis]: http://travis-ci.org/databox/databox-go
+[databox-ruby]: https://github.com/databox/databox-go
+[php-travis-badge]: https://secure.travis-ci.org/databox/databox-php.png
+[php-travis]: http://travis-ci.org/databox/databox-php
+[databox-php]: https://github.com/databox/databox-php
+[python-travis-badge]: https://secure.travis-ci.org/databox/databox-python.png
+[python-travis]: http://travis-ci.org/databox/databox-python
+[databox-python]: https://github.com/databox/databox-python
+[java-travis-badge]: https://secure.travis-ci.org/databox/databox-java.png
+[java-travis]: http://travis-ci.org/databox/databox-java
+[databox-java]: https://github.com/databox/databox-java
+
