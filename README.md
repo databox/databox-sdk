@@ -6,14 +6,14 @@ Meta-repository and Docker based test suite for Databox SDKs.
 
 ## SDKs
 
-| Language / SDK                                              |   CI Status                                                                                                       |
-|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [JavaScript](https://github.com/databox/databox-js)         | [![Build Status](https://travis-ci.org/databox/databox-js.svg)](https://travis-ci.org/databox/databox-js)         |
-| [Ruby](https://github.com/databox/databox-ruby)             | [![Build Status](https://travis-ci.org/databox/databox-ruby.svg)](https://travis-ci.org/databox/databox-ruby)     |
-| [Go](https://github.com/databox/databox-go)                 | [![Build Status](https://travis-ci.org/databox/databox-go.svg)](https://travis-ci.org/databox/databox-go)         |
-| [PHP](https://github.com/databox/databox-php)               | [![Build Status](https://travis-ci.org/databox/databox-php.svg)](https://travis-ci.org/databox/databox-php)       |
-| [Python](https://github.com/databox/databox-python)         | [![Build Status](https://travis-ci.org/databox/databox-python.svg)](https://travis-ci.org/databox/databox-python) |
-| [Java](https://github.com/databox/databox-java)             | [![Build Status](https://travis-ci.org/databox/databox-java.svg)](https://travis-ci.org/databox/databox-java)     |
+| Language / SDK           |   CI Status                                            |                                                           |
+|--------------------------|--------------------------------------------------------|
+| [JavaScript][databox-js] | [![Build Status][js-travis]][js-travis-badge]          |
+| [Ruby][databox-ruby]     | [![Build Status][ruby-travis]][ruby-travis-badge]      |
+| [Go][databox-go]         | [![Build Status][go-travis]][go-travis-badge]          |
+| [PHP][databox-php]       | [![Build Status][php-travis]][php-travis-badge]        |
+| [Python][databox-python] | [![Build Status][python-travis]][python-travis-badge]  |
+| [Java][databox-java]     | [![Build Status][java-travis]][java-travis-badge]      |
 
 ## Running suite
 
@@ -48,6 +48,7 @@ Image mounts `/sdks` folder. When developing, you can also mount local folder to
 ## Author
 
 - [Oto Brglez](https://github.com/otobrglez)
+
 
 [js-travis-badge]: https://secure.travis-ci.org/databox/databox-js.png
 [js-travis]: http://travis-ci.org/databox/databox-js
