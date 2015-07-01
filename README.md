@@ -6,14 +6,14 @@ Meta-repository and Docker based test suite for Databox SDKs.
 
 ## SDKs
 
-| Language / SDK                                              |   CI Status                                                                                                       |
-|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [JavaScript](https://github.com/databox/databox-js)         | [![Build Status](https://travis-ci.org/databox/databox-js.svg)](https://travis-ci.org/databox/databox-js)         |
-| [Ruby](https://github.com/databox/databox-ruby)             | [![Build Status](https://travis-ci.org/databox/databox-ruby.svg)](https://travis-ci.org/databox/databox-ruby)     |
-| [Go](https://github.com/databox/databox-go)                 | [![Build Status](https://travis-ci.org/databox/databox-go.svg)](https://travis-ci.org/databox/databox-go)         |
-| [PHP](https://github.com/databox/databox-php)               | [![Build Status](https://travis-ci.org/databox/databox-php.svg)](https://travis-ci.org/databox/databox-php)       |
-| [Python](https://github.com/databox/databox-python)         | [![Build Status](https://travis-ci.org/databox/databox-python.svg)](https://travis-ci.org/databox/databox-python) |
-| [Java](https://github.com/databox/databox-java)             | [![Build Status](https://travis-ci.org/databox/databox-java.svg)](https://travis-ci.org/databox/databox-java)     |
+| Language / SDK           | CI Status                                              |
+|--------------------------|--------------------------------------------------------|
+| [JavaScript][databox-js] | [![Build Status][js-travis-badge]][js-travis]          |
+| [Ruby][databox-ruby]     | [![Build Status][ruby-travis-badge]][ruby-travis]      |
+| [Go][databox-go]         | [![Build Status][go-travis-badge]][go-travis]          |
+| [PHP][databox-php]       | [![Build Status][php-travis-badge]][php-travis]        |
+| [Python][databox-python] | [![Build Status][python-travis-badge]][python-travis]  |
+| [Java][databox-java]     | [![Build Status][java-travis-badge]][java-travis]      |
 
 ## Running suite
 
@@ -48,4 +48,24 @@ Image mounts `/sdks` folder. When developing, you can also mount local folder to
 ## Author
 
 - [Oto Brglez](https://github.com/otobrglez)
+
+
+[js-travis-badge]: https://secure.travis-ci.org/databox/databox-js.png
+[js-travis]: http://travis-ci.org/databox/databox-js
+[databox-js]: https://github.com/databox/databox-js
+[ruby-travis-badge]: https://secure.travis-ci.org/databox/databox-ruby.png
+[ruby-travis]: http://travis-ci.org/databox/databox-ruby
+[databox-ruby]: https://github.com/databox/databox-ruby
+[go-travis-badge]: https://secure.travis-ci.org/databox/databox-go.png
+[go-travis]: http://travis-ci.org/databox/databox-go
+[databox-go]: https://github.com/databox/databox-go
+[php-travis-badge]: https://secure.travis-ci.org/databox/databox-php.png
+[php-travis]: http://travis-ci.org/databox/databox-php
+[databox-php]: https://github.com/databox/databox-php
+[python-travis-badge]: https://secure.travis-ci.org/databox/databox-python.png
+[python-travis]: http://travis-ci.org/databox/databox-python
+[databox-python]: https://github.com/databox/databox-python
+[java-travis-badge]: https://secure.travis-ci.org/databox/databox-java.png
+[java-travis]: http://travis-ci.org/databox/databox-java
+[databox-java]: https://github.com/databox/databox-java
 

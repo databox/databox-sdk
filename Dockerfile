@@ -13,6 +13,7 @@ RUN apt-get install -y apt-transport-https autoconf automake bison build-essenti
   libreadline-dev libreadline6-dev libsqlite3-dev libssl-dev libtool \
   libxml2-dev libxslt1-dev libyaml-dev make openssh-server openssl patch pkg-config \
   python-dev python-pip python-setuptools python-software-properties \
+  php5-common php5-cli \
   software-properties-common sqlite3 ssh-client wget zlib1g-dev
 
 # NodeJS (latest)
