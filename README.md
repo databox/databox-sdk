@@ -8,12 +8,12 @@ Meta-repository and Docker based test suite for Databox SDKs.
 
 | Language / SDK           | CI Status                                              |
 |--------------------------|--------------------------------------------------------|
-| [JavaScript][databox-js] | [![Build Status][js-travis]][js-travis-badge]          |
-| [Ruby][databox-ruby]     | [![Build Status][ruby-travis]][ruby-travis-badge]      |
-| [Go][databox-go]         | [![Build Status][go-travis]][go-travis-badge]          |
-| [PHP][databox-php]       | [![Build Status][php-travis]][php-travis-badge]        |
-| [Python][databox-python] | [![Build Status][python-travis]][python-travis-badge]  |
-| [Java][databox-java]     | [![Build Status][java-travis]][java-travis-badge]      |
+| [JavaScript][databox-js] | [![Build Status][js-travis-badge]][js-travis]          |
+| [Ruby][databox-ruby]     | [![Build Status][ruby-travis-badge]][ruby-travis]      |
+| [Go][databox-go]         | [![Build Status][go-travis-badge]][go-travis]          |
+| [PHP][databox-php]       | [![Build Status][php-travis-badge]][php-travis]        |
+| [Python][databox-python] | [![Build Status][python-travis-badge]][python-travis]  |
+| [Java][databox-java]     | [![Build Status][java-travis-badge]][java-travis]      |
 
 ## Running suite
 
@@ -58,7 +58,7 @@ Image mounts `/sdks` folder. When developing, you can also mount local folder to
 [databox-ruby]: https://github.com/databox/databox-ruby
 [go-travis-badge]: https://secure.travis-ci.org/databox/databox-go.png
 [go-travis]: http://travis-ci.org/databox/databox-go
-[databox-ruby]: https://github.com/databox/databox-go
+[databox-go]: https://github.com/databox/databox-go
 [php-travis-badge]: https://secure.travis-ci.org/databox/databox-php.png
 [php-travis]: http://travis-ci.org/databox/databox-php
 [databox-php]: https://github.com/databox/databox-php
