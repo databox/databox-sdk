@@ -6,7 +6,7 @@ Meta-repository and Docker based test suite for Databox SDKs.
 
 ## SDKs
 
-| Language / SDK           |   CI Status                                            |                                                           |
+| Language / SDK           | CI Status                                              |
 |--------------------------|--------------------------------------------------------|
 | [JavaScript][databox-js] | [![Build Status][js-travis]][js-travis-badge]          |
 | [Ruby][databox-ruby]     | [![Build Status][ruby-travis]][ruby-travis-badge]      |
